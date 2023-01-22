@@ -1,6 +1,7 @@
 package br.com.eliarlan.emoney.domain.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -24,4 +25,9 @@ public class CategoryService {
 	public Category save(Category category) {
 		return repository.save(category);
 	}
+
+	public Optional<Category> findById(Long id) {
+		return repository.findById(id);
+	}
+	
 }
